@@ -1,26 +1,34 @@
 package org.example.class4.hw;
 
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestProblemsSolving {
 
-    Problems problems;
+    private Problems problems;
 
-    @BeforeAll
+    @BeforeEach
     public void setup() {
         problems = new ProblemsSolving();
     }
 
     @Test
     public void testShouldGetMaxNumberInArray() {
-        int [] arr = new int[]{10, 14, 20};
+        int [] arr1 = {12, 10, 11, 0};
+        int actual1 = problems.getMaxNumber(arr1);
+        assertEquals(12, actual1);
 
-        int expected = 20;
-        int actual = problems.getMaxNumber(arr);
+        int [] arr2 = {1,1, 5, 5, 5, 2};
+        assertEquals(5, problems.getMaxNumber(arr2));
 
-        assertEquals(expected, actual, "should get max correctly");
+
+//        int [] arr3 = new int[0];
+//        int actual3 = problems.getMaxNumber(arr3);
+
+
     }
+
+
 }

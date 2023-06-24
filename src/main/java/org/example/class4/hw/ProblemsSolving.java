@@ -6,7 +6,16 @@ public class ProblemsSolving implements Problems {
 
 
     public int getMaxNumber(int[] array) {
-        return 0;
+        // подумать, что делать, если придет пустой массив
+        int max = array[0];
+
+        for (int num : array) {
+            if (num > max) {
+                max = num;
+            }
+        }
+
+        return max;
     }
 
     public int getMaxNumber(List<Integer> list) {
