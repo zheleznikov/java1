@@ -1,5 +1,8 @@
 package org.example.class5.exception;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.Arrays;
 
 public class Demo {
@@ -15,6 +18,7 @@ public class Demo {
         System.out.println(n);
     }
 
+
     public static void catchException(int n) {
         int num = 4;
 
@@ -27,5 +31,9 @@ public class Demo {
             e.printStackTrace();
 //            throw new CustomException("its our exception", e);
         }
+    }
+
+    public static void readerExample() throws FileNotFoundException {
+        BufferedReader reader = new BufferedReader(new FileReader("file.txt"));
     }
 }
